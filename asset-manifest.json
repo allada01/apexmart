@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/apexmart/static/css/main.abd64e84.css",
+    "main.js": "/apexmart/static/js/main.c12cf138.js",
+    "index.html": "/apexmart/index.html",
+    "main.abd64e84.css.map": "/apexmart/static/css/main.abd64e84.css.map",
+    "main.c12cf138.js.map": "/apexmart/static/js/main.c12cf138.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.abd64e84.css",
+    "static/js/main.c12cf138.js"
+  ]
+}
