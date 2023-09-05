@@ -8,7 +8,7 @@
     
     <title>ApexMart</title>
 </head>
-<body>
+<body id="unique">
     
     <table class="table table-hover" border="1px">
         <thead>
@@ -22,9 +22,12 @@
         </tbody>
     </table>
     <!-- <button class="btn btn-outline-primary">Continue To Pay</button> -->
+    
     <a class="btn btn-outline-primary" href="customer.html">Continue To Pay</a>   <!-- because with anchor tag we can have href and link to html file-->
 
+   
     <script>
+         
         let cartData= JSON.parse(localStorage.getItem('cart'));
         var total= 0;
         for(let i in cartData){             //i will get the key of the object
@@ -43,5 +46,8 @@
         }
         $("tbody").append(`<tr><td><h5>TOTAL</h5></td> <td></td> <td><h5>${total}</h5></td></tr>`);
     </script>
+     <script src="Card.js"></script>
+     
+    
 </body>
 </html>

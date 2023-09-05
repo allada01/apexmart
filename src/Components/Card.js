@@ -2,7 +2,10 @@ import React from 'react';
 import { mydb } from '../firebase';
 
 
+// var problem= require('ecommerce/src/Components/white.html');
+// import problem from 'ecommerce/src/Components/white.html';
 function Card() {
+    
     const [productsData, setProductsData] = React.useState([]); // used to keep the updates/changes in the documents
 
     React.useEffect(function () {
@@ -14,6 +17,9 @@ function Card() {
         })
 
     })
+
+   
+   
 
     function collectData(e){
         // Logic to collect the data like quantity and the id
@@ -46,7 +52,7 @@ function Card() {
             cart[myId][2]= price;      //w/o Number price is kept in string format ex ''
         }
         localStorage.setItem('cart', JSON.stringify(cart))      // to convert JS to JSON to store the data
-
+       
         // To display data in popover
         displayCart(cart);
 
@@ -59,7 +65,9 @@ function Card() {
                 console.log(cartData);
 
             }
-            cartData= cartData + '<a href="white.html" class="btn btn-success">Continue</a>';
+            // 
+            //''
+            cartData= cartData + '<a class="btn btn-success" href="#">Continue</a>'
             document.getElementById('myPopover').setAttribute('data-content', cartData);     //because in popover whatever was in data-content that is replaced by cardData (see Popover button in Navbar)
             // for(let [k,v] of Object.entries(mycart)){ if you use for of you will get an error "mycart not iterable"
             //     console.log(`${k} ${v}`);        DIFFICULT TO USE 'FOR OF' ON OBJECTS
@@ -67,6 +75,7 @@ function Card() {
         }
         
     }
+    
 
     return (
         <div className= 'all' style={{display: "flex"}}>
